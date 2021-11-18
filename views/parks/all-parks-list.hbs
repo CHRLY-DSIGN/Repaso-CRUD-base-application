@@ -1,0 +1,26 @@
+<h1>
+  Parks list:
+</h1>
+<div>
+  <div>
+    {{#each allParks}}
+      <div>
+
+        <h2>{{name}}</h2>
+        <p>{{description}}</p> 
+        <a href="/parks/edit/{{id}}">Edit</a>
+        <a href="/parks/delete/{{id}}">Delete</a>  
+
+      </div>
+    {{/each}} 
+  </div>
+
+  <div>
+      <div>
+        <a href="/parks/new">Add a new park</a> 
+      </div>
+      <div>
+        <a href="/">Go back home</a> 
+      </div>
+    </div>
+  </div>

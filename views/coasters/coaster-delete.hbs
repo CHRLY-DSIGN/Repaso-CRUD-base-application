@@ -1,0 +1,7 @@
+<h2> Sure you want to delete {{name}}?</h2>
+
+<form action="/coasters/{{id}}/delete" method="POST">
+
+<button class="delete-btn" type="submit" name="delete-btn" id="submit">Yes, delete it</button>
+<a class="edit-btn" href="/coasters/{{id}}">No, go back</a>
+</form>

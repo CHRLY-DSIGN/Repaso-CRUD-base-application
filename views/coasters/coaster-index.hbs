@@ -1,38 +1,26 @@
 <div class="container coasters-index">
 
-  <a href="/coasters/new" class="btn btn-dark">Crear nueva montaña rusa</a>
+  <a href="/coasters/new" class="btn btn-dark">Add a new coaster</a>
 
-  <h1 style="font-weight: 100">Índice de montañas rusas</h1>
+  <h1 style="font-weight: 100">Check all the Coasters:</h1>
 
 
-  <!-- ***** CREA UNA FICHA DE LISTA POR CADA MONTAÑA RUSA **** -->
+  {{#each allCoasters}}
+    <div>
+        <h4>{{name}}</h4>
+        <p>Description:</p> 
+        <p>{{description}}</p> 
+        <p>Inversions:</p> 
+        <p>{{inversions}}</p>
+        <p>Length:</p> 
+        <p>{{length}}</p> 
+        <p>Is in the park:</p> 
+        <p>{{park_id.name}}</p>  
+        <a href="/coasters/{{id}}">Details</a>
+        <a href="/coasters/{{id}}/delete">Delete</a> 
+    </div>
+  {{/each}}
 
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
-  <a href="#" class="btn btn-sm btn-dark">Ver detalles</a>
-  <h4>Nombre de montaña rusa</h4>
-  <p>Descripción de montaña rusa</p>
-  <small><strong>Longitud: </strong> 000m | <strong>Inversiones: </strong> 0 | <strong>Parque: </strong> XXXXXX</small>
-  <hr>
 
 
 

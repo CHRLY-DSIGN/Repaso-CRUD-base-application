@@ -14,6 +14,7 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
+app.use(express.static('public/images'));
 
 // ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
 require("./config")(app);
@@ -25,8 +26,9 @@ const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowe
 app.locals.title = `${capitalized(projectName)} created with IronLauncher`;
 
 // 👇 Start handling routes here
-const index = require("./routes/index");
-app.use("/", index);
+//const index = require("./routes/index");
+//app.use("/", index);
+require("./routes/index")(app)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
