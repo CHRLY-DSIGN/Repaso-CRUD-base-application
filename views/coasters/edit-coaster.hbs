@@ -28,7 +28,7 @@
         <div class="form-group">
           <label for="park-list">Is in the park:</label>
           <select name="park" class="form-control" id="park-list">
-            <option>Select park</option>
+            <option disabled >{{coaster.park_id.name}}</option>
 
             {{#each parks}}
               <option value="{{_id}}">{{name}}</option>
